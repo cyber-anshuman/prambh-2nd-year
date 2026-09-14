@@ -1,0 +1,10 @@
+# Deployment Notes - Staging Migration
+
+System: Static Web Mirror
+Environment: Production Staging
+
+Notes:
+- Automated synchronization completed for the Prambh 2nd Year event platform.
+- Security and compliance documentation was moved to the restricted operations area during the migration.
+- Automated sync cron runs every Sunday at 02:00 IST.
+- For inquiries, contact: it-ops@blackout-college.local

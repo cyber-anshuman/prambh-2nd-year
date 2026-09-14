@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student and Member Authentication Portal for Blackout College Technology Club.">
+  <title>Student Login | Blackout College Technology Club</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-link" aria-label="Blackout College Technology Club Home">
+        <svg class="brand-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="8" fill="#131D31" stroke="#1E293B" stroke-width="1.5"/>
+          <path d="M12 10H22C25.3137 10 28 12.6863 28 16C28 18.2372 26.7725 20.188 24.9644 21.2183C27.3551 22.1868 29 24.5218 29 27.25C29 30.7018 26.2018 33.5 22.75 33.5H12V10Z" stroke="#00E599" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 21H22" stroke="#00E599" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="21.5" cy="15.5" r="1.5" fill="#06B6D4"/>
+          <circle cx="22" cy="27" r="1.5" fill="#06B6D4"/>
+        </svg>
+        <div>
+          <span>BLACKOUT</span>
+          <span class="brand-text-sub">COLLEGE TECH CLUB</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-menu-portal-item" style="display: none;">
+            <a href="portal.html" class="btn btn-sm btn-accent-outline" style="width: 100%; text-align: center; margin-bottom: 8px;">Student Portal</a>
+            <a href="login.html" class="btn btn-sm btn-primary" style="width: 100%; text-align: center;">Login</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="portal.html" class="btn btn-sm btn-accent-outline">Student Portal</a>
+        <a href="login.html" class="btn btn-sm btn-primary active">Login</a>
+      </div>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" class="auth-wrapper">
+    <div class="auth-card">
+      <div class="auth-header">
+        <svg class="brand-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 48px; height: 48px;">
+          <rect width="40" height="40" rx="8" fill="#131D31" stroke="#1E293B" stroke-width="1.5"/>
+          <path d="M12 10H22C25.3137 10 28 12.6863 28 16C28 18.2372 26.7725 20.188 24.9644 21.2183C27.3551 22.1868 29 24.5218 29 27.25C29 30.7018 26.2018 33.5 22.75 33.5H12V10Z" stroke="#00E599" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 21H22" stroke="#00E599" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="21.5" cy="15.5" r="1.5" fill="#06B6D4"/>
+          <circle cx="22" cy="27" r="1.5" fill="#06B6D4"/>
+        </svg>
+        <h1 class="auth-title">Student Portal Login</h1>
+        <p style="font-size: 0.9rem; color: var(--text-secondary);">
+          Sign in with your registered college student credentials
+        </p>
+      </div>
+
+      <!-- Simulated Alert Display -->
+      <div id="loginAlert" class="alert" style="display: none;" role="alert"></div>
+
+      <!-- Temporary staging integration note: verify directory schema before production deployment. -->
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="studentId" class="form-label">Student ID / Roll Number</label>
+          <input 
+            type="text" 
+            id="studentId" 
+            class="form-control" 
+            placeholder="e.g. 2026-CS-041" 
+            autocomplete="username" 
+            required
+          >
+          <div class="form-feedback">Please enter your Student ID.</div>
+        </div>
+
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <label for="studentPassword" class="form-label" style="margin-bottom: 0;">Password</label>
+            <a href="#" onclick="alert('Password recovery is managed by the campus IT helpdesk. Please contact admin@blackout-college.local'); return false;" style="font-size: 0.8rem; color: var(--accent-primary);">
+              Forgot password?
+            </a>
+          </div>
+          <input 
+            type="password" 
+            id="studentPassword" 
+            class="form-control" 
+            placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" 
+            autocomplete="current-password" 
+            required
+          >
+          <div class="form-feedback">Please enter your password.</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-check">
+            <input type="checkbox" id="rememberMe" class="form-check-input">
+            <span class="form-check-label">Remember me on this workstation</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          Sign In to Portal
+        </button>
+      </form>
+
+      <div class="auth-footer">
+        <div>Having trouble accessing the portal?</div>
+        <a href="contact.html" style="color: var(--accent-primary); font-weight: 500;">Contact Lab Administrator</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <svg class="brand-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="40" height="40" rx="8" fill="#131D31" stroke="#1E293B" stroke-width="1.5"/>
+              <path d="M12 10H22C25.3137 10 28 12.6863 28 16C28 18.2372 26.7725 20.188 24.9644 21.2183C27.3551 22.1868 29 24.5218 29 27.25C29 30.7018 26.2018 33.5 22.75 33.5H12V10Z" stroke="#00E599" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 21H22" stroke="#00E599" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="21.5" cy="15.5" r="1.5" fill="#06B6D4"/>
+              <circle cx="22" cy="27" r="1.5" fill="#06B6D4"/>
+            </svg>
+            <div>
+              <span>BLACKOUT</span>
+              <span class="brand-text-sub">COLLEGE TECH CLUB</span>
+            </div>
+          </a>
+          <p>
+            Blackout College Technology Club is an academic student organization dedicated to practical technology education, collaborative software development, and cybersecurity awareness.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="events.html">Events & Workshops</a></li>
+            <li><a href="projects.html">Student Projects</a></li>
+            <li><a href="team.html">Leadership Team</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="portal.html">Student Portal</a></li>
+            <li><a href="login.html">Member Authentication</a></li>
+            <li><a href="contact.html">Contact & Location</a></li>
+            <li><a href="login.html#main-content">Lab Guidelines</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <p style="font-size: 0.9rem; line-height: 1.7; margin-bottom: 12px;">
+            Blackout Technology Center<br>
+            Innovation Block<br>
+            Fictional College Campus
+          </p>
+          <p style="font-size: 0.9rem; color: var(--accent-primary);">
+            contact@blackout-college.local
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Blackout College Technology Club. Learn. Build. Secure.
+        </div>
+        <div>
+          Fictional Academic Technology Organization &bull; For Educational Competition Use Only
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

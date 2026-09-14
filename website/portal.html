@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blackout Student Dashboard - Track club activities, event registrations, projects, and lab credentials.">
+  <title>Student Portal | Blackout College Technology Club</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-link" aria-label="Blackout College Technology Club Home">
+        <svg class="brand-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="8" fill="#131D31" stroke="#1E293B" stroke-width="1.5"/>
+          <path d="M12 10H22C25.3137 10 28 12.6863 28 16C28 18.2372 26.7725 20.188 24.9644 21.2183C27.3551 22.1868 29 24.5218 29 27.25C29 30.7018 26.2018 33.5 22.75 33.5H12V10Z" stroke="#00E599" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 21H22" stroke="#00E599" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="21.5" cy="15.5" r="1.5" fill="#06B6D4"/>
+          <circle cx="22" cy="27" r="1.5" fill="#06B6D4"/>
+        </svg>
+        <div>
+          <span>BLACKOUT</span>
+          <span class="brand-text-sub">COLLEGE TECH CLUB</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-menu-portal-item" style="display: none;">
+            <a href="portal.html" class="btn btn-sm btn-accent-outline active" style="width: 100%; text-align: center; margin-bottom: 8px;">Student Portal</a>
+            <a href="login.html" class="btn btn-sm btn-primary" style="width: 100%; text-align: center;">Logout</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="portal.html" class="btn btn-sm btn-accent-outline active">Student Portal</a>
+        <a href="login.html" class="btn btn-sm btn-outline">Logout</a>
+      </div>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" class="section" style="padding-top: 40px;">
+    <div class="container">
+      <!-- Portal Banner -->
+      <div class="portal-banner">
+        <div>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+            <h1 class="page-title" style="font-size: 2rem; margin-bottom: 0;">Student Portal</h1>
+            <span class="badge badge-general" style="font-size: 0.7rem;">Demo Access</span>
+          </div>
+          <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 0;">
+            Welcome back, student.
+          </p>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div style="text-align: right;">
+            <div style="font-weight: 700; font-size: 0.95rem;">Session: Student #2026-CS-041</div>
+            <div style="font-size: 0.8rem; color: var(--accent-primary);">Active Local Session</div>
+          </div>
+          <div class="team-avatar" style="width: 48px; height: 48px; font-size: 1rem; margin-bottom: 0;">
+            ST
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistics Cards -->
+      <div class="grid grid-4" style="margin-bottom: 40px;">
+        <!-- Registered Events -->
+        <div class="stat-card">
+          <div class="card-icon-box" style="margin-bottom: 0;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <div>
+            <div class="stat-number">3</div>
+            <div class="stat-label">Registered Events</div>
+          </div>
+        </div>
+
+        <!-- Active Projects -->
+        <div class="stat-card">
+          <div class="card-icon-box blue" style="margin-bottom: 0;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div>
+            <div class="stat-number">2</div>
+            <div class="stat-label">Active Projects</div>
+          </div>
+        </div>
+
+        <!-- Completed Workshops -->
+        <div class="stat-card">
+          <div class="card-icon-box cyan" style="margin-bottom: 0;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <div>
+            <div class="stat-number">5</div>
+            <div class="stat-label">Completed Workshops</div>
+          </div>
+        </div>
+
+        <!-- Security Score -->
+        <div class="stat-card">
+          <div class="card-icon-box purple" style="margin-bottom: 0;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="stat-number" style="color: #c084fc;">94<span style="font-size: 1.1rem; font-weight: 500;">/100</span></div>
+            <div class="stat-label">Security Score</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Dashboard Grid -->
+      <div class="grid grid-2" style="gap: 32px; align-items: flex-start; margin-bottom: 40px;">
+        <!-- Left: Upcoming Events & Registered Schedule -->
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2 class="card-title" style="font-size: 1.25rem; margin-bottom: 0;">Your Upcoming Schedule</h2>
+            <a href="events.html" class="btn btn-sm btn-outline">All Events</a>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="padding: 16px; background: var(--bg-secondary); border-radius: var(--radius-sm); border-left: 3px solid var(--accent-primary);">
+              <div style="font-size: 0.8rem; color: var(--accent-primary); font-weight: 600; margin-bottom: 4px;">
+                12 September 2026 &bull; 04:00 PM
+              </div>
+              <div style="font-weight: 700; margin-bottom: 4px;">Cyber Security Workshop</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary);">Room: Innovation Block Lab 2 &bull; Confirmed RSVP</div>
+            </div>
+
+            <div style="padding: 16px; background: var(--bg-secondary); border-radius: var(--radius-sm); border-left: 3px solid #38bdf8;">
+              <div style="font-size: 0.8rem; color: #38bdf8; font-weight: 600; margin-bottom: 4px;">
+                15 September 2026 &bull; 10:00 AM
+              </div>
+              <div style="font-weight: 700; margin-bottom: 4px;">Prambh 2nd Year CTF</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary);">College Auditorium &bull; Team: "NullPointers"</div>
+            </div>
+
+            <div style="padding: 16px; background: var(--bg-secondary); border-radius: var(--radius-sm); border-left: 3px solid #c084fc;">
+              <div style="font-size: 0.8rem; color: #c084fc; font-weight: 600; margin-bottom: 4px;">
+                22 September 2026 &bull; 02:30 PM
+              </div>
+              <div style="font-weight: 700; margin-bottom: 4px;">Secure Coding Bootcamp</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary);">Seminar Hall A &bull; Waitlist Cleared</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Project Status & Contributions -->
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2 class="card-title" style="font-size: 1.25rem; margin-bottom: 0;">Project Assignments</h2>
+            <a href="projects.html" class="btn btn-sm btn-outline">Explore More</a>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="padding: 16px; background: var(--bg-secondary); border-radius: var(--radius-sm);">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-weight: 700;">Campus Network Monitor</span>
+                <span class="project-status"><span class="status-dot"></span> Active Sprint</span>
+              </div>
+              <p style="font-size: 0.85rem; margin-bottom: 10px;">Role: Frontend Telemetry Components &bull; Assigned to Isha Nair's squad.</p>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Last Git commit: 2 hours ago</div>
+            </div>
+
+            <div style="padding: 16px; background: var(--bg-secondary); border-radius: var(--radius-sm);">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span style="font-weight: 700;">Secure Attendance System</span>
+                <span class="project-status"><span class="status-dot" style="background: #38bdf8;"></span> Review</span>
+              </div>
+              <p style="font-size: 0.85rem; margin-bottom: 10px;">Role: Token verification routine test cases &bull; In review.</p>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Pull request #14 pending review</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom: Notifications & Profile Summary -->
+      <div class="grid grid-2" style="gap: 32px; align-items: flex-start;">
+        <!-- Notifications -->
+        <div class="card">
+          <h2 class="card-title" style="font-size: 1.25rem; margin-bottom: 16px;">Notifications &amp; Alerts</h2>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div class="alert alert-info" style="margin-bottom: 0; padding: 12px 16px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="16" x2="12" y2="12"/>
+                <line x1="12" y1="8" x2="12.01" y2="8"/>
+              </svg>
+              <span style="font-size: 0.85rem;">CTF environment rules and network access keys will be broadcast 2 hours before competition launch.</span>
+            </div>
+
+            <div class="alert alert-success" style="margin-bottom: 0; padding: 12px 16px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span style="font-size: 0.85rem;">Lab workstation access pass renewed through the end of the semester.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Summary -->
+        <div class="card">
+          <h2 class="card-title" style="font-size: 1.25rem; margin-bottom: 16px;">Student Profile Summary</h2>
+          <div style="font-size: 0.9rem; line-height: 1.8; color: var(--text-secondary);">
+            <div><strong>Department:</strong> Department of Computer Science</div>
+            <div><strong>Academic Term:</strong> Year 2, Semester 3</div>
+            <div><strong>Lab Privileges:</strong> Standard Sandbox (VLAN 10)</div>
+            <div><strong>Emergency Contact:</strong> Recorded in Campus Registrar</div>
+          </div>
+          <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+            <a href="contact.html" class="btn btn-sm btn-outline" style="width: 100%;">Update Information with Registrar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <svg class="brand-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="40" height="40" rx="8" fill="#131D31" stroke="#1E293B" stroke-width="1.5"/>
+              <path d="M12 10H22C25.3137 10 28 12.6863 28 16C28 18.2372 26.7725 20.188 24.9644 21.2183C27.3551 22.1868 29 24.5218 29 27.25C29 30.7018 26.2018 33.5 22.75 33.5H12V10Z" stroke="#00E599" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 21H22" stroke="#00E599" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="21.5" cy="15.5" r="1.5" fill="#06B6D4"/>
+              <circle cx="22" cy="27" r="1.5" fill="#06B6D4"/>
+            </svg>
+            <div>
+              <span>BLACKOUT</span>
+              <span class="brand-text-sub">COLLEGE TECH CLUB</span>
+            </div>
+          </a>
+          <p>
+            Blackout College Technology Club is an academic student organization dedicated to practical technology education, collaborative software development, and cybersecurity awareness.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="events.html">Events & Workshops</a></li>
+            <li><a href="projects.html">Student Projects</a></li>
+            <li><a href="team.html">Leadership Team</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="portal.html">Student Portal</a></li>
+            <li><a href="login.html">Member Authentication</a></li>
+            <li><a href="contact.html">Contact & Location</a></li>
+            <li><a href="portal.html#main-content">Lab Guidelines</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <p style="font-size: 0.9rem; line-height: 1.7; margin-bottom: 12px;">
+            Blackout Technology Center<br>
+            Innovation Block<br>
+            Fictional College Campus
+          </p>
+          <p style="font-size: 0.9rem; color: var(--accent-primary);">
+            contact@blackout-college.local
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Blackout College Technology Club. Learn. Build. Secure.
+        </div>
+        <div>
+          Fictional Academic Technology Organization &bull; For Educational Competition Use Only
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

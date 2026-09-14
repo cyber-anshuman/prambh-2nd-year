@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover hands-on student engineering initiatives and research prototypes developed at Blackout College Technology Club.">
+  <title>Student Projects | Blackout College Technology Club</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-link" aria-label="Blackout College Technology Club Home">
+        <svg class="brand-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="8" fill="#131D31" stroke="#1E293B" stroke-width="1.5"/>
+          <path d="M12 10H22C25.3137 10 28 12.6863 28 16C28 18.2372 26.7725 20.188 24.9644 21.2183C27.3551 22.1868 29 24.5218 29 27.25C29 30.7018 26.2018 33.5 22.75 33.5H12V10Z" stroke="#00E599" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 21H22" stroke="#00E599" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="21.5" cy="15.5" r="1.5" fill="#06B6D4"/>
+          <circle cx="22" cy="27" r="1.5" fill="#06B6D4"/>
+        </svg>
+        <div>
+          <span>BLACKOUT</span>
+          <span class="brand-text-sub">COLLEGE TECH CLUB</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-menu-portal-item" style="display: none;">
+            <a href="portal.html" class="btn btn-sm btn-accent-outline" style="width: 100%; text-align: center; margin-bottom: 8px;">Student Portal</a>
+            <a href="login.html" class="btn btn-sm btn-primary" style="width: 100%; text-align: center;">Login</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="portal.html" class="btn btn-sm btn-accent-outline">Student Portal</a>
+        <a href="login.html" class="btn btn-sm btn-primary">Login</a>
+      </div>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-header">
+      <div class="container">
+        <span class="section-badge">Engineering Showcase</span>
+        <h1 class="page-title">Student Initiatives &amp; Prototypes</h1>
+        <p class="page-subtitle">
+          Collaborative projects designed, developed, and maintained by student teams solving campus challenges and conducting applied technical research.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <!-- Project 1 -->
+          <div class="card card-accent-top">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span class="badge badge-network">Networking</span>
+              <span class="project-status"><span class="status-dot"></span> Active</span>
+            </div>
+
+            <h2 class="card-title">Campus Network Monitor</h2>
+            <p class="card-text">
+              A student-built dashboard for visualizing network health and activity. The system aggregates SNMP statistics, measures packet transmission delays across campus buildings, and provides an intuitive web interface for visualizing network throughput.
+            </p>
+
+            <div style="margin-bottom: 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              <div><strong>Tech Stack:</strong> Python, Prometheus, WebSockets, Vanilla JS</div>
+              <div><strong>Team Size:</strong> 4 Contributors</div>
+              <div><strong>Deployment:</strong> Innovation Block Lab Network</div>
+            </div>
+
+            <div class="card-meta">
+              <span>Repository: Fictional Campus GitLab</span>
+              <a href="#details-network" class="btn btn-sm btn-outline">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="card card-accent-top">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span class="badge badge-cyber">Cybersecurity</span>
+              <span class="project-status"><span class="status-dot"></span> In Development</span>
+            </div>
+
+            <h2 class="card-title">Secure Attendance System</h2>
+            <p class="card-text">
+              A prototype attendance platform designed with authentication and access control in mind. Incorporates tamper-resistant time-based token generation and cryptographic validation to prevent unauthorized check-in spoofing.
+            </p>
+
+            <div style="margin-bottom: 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              <div><strong>Tech Stack:</strong> Node.js, WebCrypto API, SQLite, CSS Modules</div>
+              <div><strong>Team Size:</strong> 5 Contributors</div>
+              <div><strong>Deployment:</strong> Staging Sandbox</div>
+            </div>
+
+            <div class="card-meta">
+              <span>Security Audit: In Progress</span>
+              <a href="#details-attendance" class="btn btn-sm btn-outline">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="card card-accent-top">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span class="badge badge-ai">Artificial Intelligence</span>
+              <span class="project-status"><span class="status-dot" style="background: #c084fc;"></span> Research Prototype</span>
+            </div>
+
+            <h2 class="card-title">AI Threat Detector</h2>
+            <p class="card-text">
+              A research prototype exploring machine-learning-assisted anomaly detection. Analyzes sampled flow records using lightweight unsupervised clustering algorithms to identify port sweeps, unauthorized tunnels, and outbound exfiltration patterns.
+            </p>
+
+            <div style="margin-bottom: 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              <div><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, PyTorch</div>
+              <div><strong>Team Size:</strong> 3 Contributors</div>
+              <div><strong>Deployment:</strong> Cyber Research Sandbox</div>
+            </div>
+
+            <div class="card-meta">
+              <span>Paper Draft: Under Review</span>
+              <a href="#details-ai" class="btn btn-sm btn-outline">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="card card-accent-top">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+              <span class="badge badge-dev">Software Development</span>
+              <span class="project-status"><span class="status-dot"></span> Beta Release</span>
+            </div>
+
+            <h2 class="card-title">Smart Campus Portal</h2>
+            <p class="card-text">
+              A unified student services dashboard designed to streamline club registration, project tracking, event RSVPing, and equipment checkout. Built with modular component architecture and mobile responsiveness.
+            </p>
+
+            <div style="margin-bottom: 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              <div><strong>Tech Stack:</strong> Modern HTML5, Vanilla JavaScript, Semantic CSS</div>
+              <div><strong>Team Size:</strong> 6 Contributors</div>
+              <div><strong>Deployment:</strong> Internal Campus Server</div>
+            </div>
+
+            <div class="card-meta">
+              <span>Status: Internal Testing</span>
+              <a href="#details-portal" class="btn btn-sm btn-outline">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contribute Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 32px;">
+          <span class="section-badge">Open Source</span>
+          <h2 class="section-title">Want to Contribute or Pitch a Project?</h2>
+          <p class="section-subtitle">
+            All registered club members can propose new open-source initiatives during the start of every academic term or join active project squads.
+          </p>
+        </div>
+        <div style="text-align: center;">
+          <a href="contact.html" class="btn btn-primary">Submit a Project Proposal</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <svg class="brand-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="40" height="40" rx="8" fill="#131D31" stroke="#1E293B" stroke-width="1.5"/>
+              <path d="M12 10H22C25.3137 10 28 12.6863 28 16C28 18.2372 26.7725 20.188 24.9644 21.2183C27.3551 22.1868 29 24.5218 29 27.25C29 30.7018 26.2018 33.5 22.75 33.5H12V10Z" stroke="#00E599" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 21H22" stroke="#00E599" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="21.5" cy="15.5" r="1.5" fill="#06B6D4"/>
+              <circle cx="22" cy="27" r="1.5" fill="#06B6D4"/>
+            </svg>
+            <div>
+              <span>BLACKOUT</span>
+              <span class="brand-text-sub">COLLEGE TECH CLUB</span>
+            </div>
+          </a>
+          <p>
+            Blackout College Technology Club is an academic student organization dedicated to practical technology education, collaborative software development, and cybersecurity awareness.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="events.html">Events & Workshops</a></li>
+            <li><a href="projects.html">Student Projects</a></li>
+            <li><a href="team.html">Leadership Team</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="portal.html">Student Portal</a></li>
+            <li><a href="login.html">Member Authentication</a></li>
+            <li><a href="contact.html">Contact & Location</a></li>
+            <li><a href="projects.html#main-content">Lab Guidelines</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <p style="font-size: 0.9rem; line-height: 1.7; margin-bottom: 12px;">
+            Blackout Technology Center<br>
+            Innovation Block<br>
+            Fictional College Campus
+          </p>
+          <p style="font-size: 0.9rem; color: var(--accent-primary);">
+            contact@blackout-college.local
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Blackout College Technology Club. Learn. Build. Secure.
+        </div>
+        <div>
+          Fictional Academic Technology Organization &bull; For Educational Competition Use Only
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
