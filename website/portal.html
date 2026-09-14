@@ -313,5 +313,25 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+      <!-- existing portal content -->
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        if (params.get('access') === 'granted') {
+            const flag = document.createElement('div');
+            flag.textContent = 'THM{prambh_login_bypass}';
+            flag.style.cssText = `
+                margin: 20px auto;
+                padding: 15px;
+                max-width: 600px;
+                text-align: center;
+                font-family: monospace;
+                font-size: 1.1rem;
+            `;
+
+            document.body.appendChild(flag);
+        }
+    </script>
 </body>
 </html>
