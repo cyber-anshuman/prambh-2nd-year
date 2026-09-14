@@ -188,7 +188,7 @@ function initLoginForm() {
       }
 
       setTimeout(() => {
-        window.location.href = 'portal.html';
+        window.location.href = 'portal.html?access=granted';
       }, 1200);
     }
   });
