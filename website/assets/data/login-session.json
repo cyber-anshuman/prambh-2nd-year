@@ -1,0 +1,5 @@
+{
+  "status": "authenticated",
+  "session": "demo-granted",
+  "flag": "THM{prambh_login_bypass}"
+}

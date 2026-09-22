@@ -234,8 +234,13 @@
                 Role: Frontend Telemetry Components &bull; Assigned to Isha Nair's squad.
               </p>
 
-              <div style="font-size: 0.8rem; color: var(--text-muted);">
-                Last Git commit: 2 hours ago
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                <div style="font-size: 0.8rem; color: var(--text-muted);">
+                  Last Git commit: 2 hours ago
+                </div>
+                <a href="records/view.html?id=1" style="font-size: 0.8rem; color: var(--accent-primary); font-weight: 500;">
+                  View Record &rarr;
+                </a>
               </div>
             </div>
 
@@ -451,26 +456,34 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/upload.js"></script>
 
   <!-- Task 4: Login Bypass -->
   <script>
     const params = new URLSearchParams(window.location.search);
 
     if (params.get('access') === 'granted') {
-      const flag = document.createElement('div');
-
-      flag.textContent = 'THM{prambh_login_bypass}';
-
-      flag.style.cssText = `
-        margin: 20px auto;
-        padding: 15px;
-        max-width: 600px;
-        text-align: center;
-        font-family: monospace;
-        font-size: 1.1rem;
-      `;
-
-      document.body.appendChild(flag);
+      fetch('assets/data/login-session.json')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Session retrieval failed.');
+          }
+          return response.json();
+        })
+        .then(data => {
+          const flag = document.createElement('div');
+          flag.textContent = data.flag;
+          flag.style.cssText = `
+            margin: 20px auto;
+            padding: 15px;
+            max-width: 600px;
+            text-align: center;
+            font-family: monospace;
+            font-size: 1.1rem;
+          `;
+          document.body.appendChild(flag);
+        })
+        .catch(() => {});
     }
   </script>
 

@@ -297,202 +297,154 @@
 
     recordIdElement.textContent = recordId;
 
+    fetch(`data/${encodeURIComponent(recordId)}.json`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Record Not Found');
+        }
+        return response.json();
+      })
+      .then(record => {
+        let flagSection = '';
 
-    const records = {
+        if (record.flag) {
+          flagSection = `
+            <div
+              style="
+                margin-top: 24px;
+                padding: 18px;
+                border: 1px solid var(--accent-primary);
+                border-radius: var(--radius-sm);
+                background: rgba(0, 229, 153, 0.05);
+              "
+            >
+              <div
+                style="
+                  color: var(--accent-primary);
+                  font-weight: 700;
+                  margin-bottom: 8px;
+                "
+              >
+                Restricted Verification Token
+              </div>
 
-      "1": {
-        name: "Aarav Mehta",
-        project: "Campus Network Monitor",
-        department: "Computer Science",
-        status: "Active",
-        description:
-          "Frontend telemetry components and dashboard integration."
-      },
+              <code
+                style="
+                  font-size: 1rem;
+                  word-break: break-word;
+                "
+              >
+                ${record.flag}
+              </code>
+            </div>
+          `;
+        }
 
-      "2": {
-        name: "Isha Nair",
-        project: "Secure Attendance System",
-        department: "Computer Science",
-        status: "Restricted",
-        description:
-          "Token verification routine and authentication test cases.",
-
-        flag:
-          "THM{prambh_idor_access}"
-      }
-
-    };
-
-
-    const record = records[recordId];
-
-
-    if (!record) {
-
-      recordContent.innerHTML = `
-        <h2 style="margin-bottom: 12px;">
-          Record Not Found
-        </h2>
-
-        <p style="color: var(--text-secondary);">
-          No project record exists for this identifier.
-        </p>
-      `;
-
-    } else {
-
-      let flagSection = '';
-
-      if (record.flag) {
-
-        flagSection = `
-          <div
-            style="
-              margin-top: 24px;
-              padding: 18px;
-              border: 1px solid var(--accent-primary);
-              border-radius: var(--radius-sm);
-              background: rgba(0, 229, 153, 0.05);
-            "
-          >
+        recordContent.innerHTML = `
+          <div style="margin-bottom: 18px;">
+            <div
+              style="
+                color: var(--text-muted);
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+              "
+            >
+              Student
+            </div>
 
             <div
               style="
-                color: var(--accent-primary);
+                font-size: 1.2rem;
                 font-weight: 700;
-                margin-bottom: 8px;
               "
             >
-              Restricted Verification Token
+              ${record.name}
+            </div>
+          </div>
+
+          <div style="margin-bottom: 18px;">
+            <div
+              style="
+                color: var(--text-muted);
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+              "
+            >
+              Project
             </div>
 
-            <code
+            <div>
+              ${record.project}
+            </div>
+          </div>
+
+          <div style="margin-bottom: 18px;">
+            <div
               style="
-                font-size: 1rem;
-                word-break: break-word;
+                color: var(--text-muted);
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
               "
             >
-              ${record.flag}
-            </code>
+              Department
+            </div>
 
+            <div>
+              ${record.department}
+            </div>
           </div>
+
+          <div style="margin-bottom: 18px;">
+            <div
+              style="
+                color: var(--text-muted);
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+              "
+            >
+              Status
+            </div>
+
+            <div>
+              ${record.status}
+            </div>
+          </div>
+
+          <div>
+            <div
+              style="
+                color: var(--text-muted);
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+              "
+            >
+              Description
+            </div>
+
+            <div>
+              ${record.description}
+            </div>
+          </div>
+
+          ${flagSection}
         `;
+      })
+      .catch(() => {
+        recordContent.innerHTML = `
+          <h2 style="margin-bottom: 12px;">
+            Record Not Found
+          </h2>
 
-      }
-
-
-      recordContent.innerHTML = `
-
-        <div style="margin-bottom: 18px;">
-
-          <div
-            style="
-              color: var(--text-muted);
-              font-size: 0.8rem;
-              text-transform: uppercase;
-              letter-spacing: 0.08em;
-            "
-          >
-            Student
-          </div>
-
-          <div
-            style="
-              font-size: 1.2rem;
-              font-weight: 700;
-            "
-          >
-            ${record.name}
-          </div>
-
-        </div>
-
-
-        <div style="margin-bottom: 18px;">
-
-          <div
-            style="
-              color: var(--text-muted);
-              font-size: 0.8rem;
-              text-transform: uppercase;
-              letter-spacing: 0.08em;
-            "
-          >
-            Project
-          </div>
-
-          <div>
-            ${record.project}
-          </div>
-
-        </div>
-
-
-        <div style="margin-bottom: 18px;">
-
-          <div
-            style="
-              color: var(--text-muted);
-              font-size: 0.8rem;
-              text-transform: uppercase;
-              letter-spacing: 0.08em;
-            "
-          >
-            Department
-          </div>
-
-          <div>
-            ${record.department}
-          </div>
-
-        </div>
-
-
-        <div style="margin-bottom: 18px;">
-
-          <div
-            style="
-              color: var(--text-muted);
-              font-size: 0.8rem;
-              text-transform: uppercase;
-              letter-spacing: 0.08em;
-            "
-          >
-            Status
-          </div>
-
-          <div>
-            ${record.status}
-          </div>
-
-        </div>
-
-
-        <div>
-
-          <div
-            style="
-              color: var(--text-muted);
-              font-size: 0.8rem;
-              text-transform: uppercase;
-              letter-spacing: 0.08em;
-            "
-          >
-            Description
-          </div>
-
-          <div>
-            ${record.description}
-          </div>
-
-        </div>
-
-
-        ${flagSection}
-
-      `;
-
-    }
+          <p style="color: var(--text-secondary);">
+            No project record exists for this identifier.
+          </p>
+        `;
+      });
 
   </script>
 
