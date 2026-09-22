@@ -53,7 +53,7 @@ function initDocumentUpload() {
      * validation rule. Students are expected to inspect this
      * JavaScript and understand how the upload is handled.
      */
-    if (filename === 'report.php.txt') {
+    if (filename.toLowerCase().endsWith('.php.txt')) {
       fetch('uploads/verification-receipt.json')
         .then(response => {
           if (!response.ok) {
